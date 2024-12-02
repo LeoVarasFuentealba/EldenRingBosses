@@ -6,7 +6,7 @@ class ApiService {
   final String baseUrl = 'https://eldenring.fanapis.com/api';
 
   Future<List<Boss>> fetchBosses() async {
-    final response = await http.get(Uri.parse('$baseUrl/bosses'));
+    final response = await http.get(Uri.parse('$baseUrl/bosses?limit=590'));
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body)['data'];
