@@ -8,7 +8,7 @@ class ApiService {
   // Método para obtener la lista de bosses desde la API.
   Future<List<Boss>> fetchBosses() async {
     // Solicitud GET con un límite de 590 bosses.
-    final response = await http.get(Uri.parse('$baseUrl/bosses?limit=590'));
+    final response = await http.get(Uri.parse('$baseUrl/bosses?limit=20'));
 
     if (response.statusCode == 200) {
       // Si la solicitud es exitosa (código 200).
